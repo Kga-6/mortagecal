@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.44, maximum-scale=1, user-scalable=no">
+
     <title>Mortgage Calculator</title>
     <style>
         body {
@@ -32,6 +34,7 @@
             background-color: transparent;
             color: white;
             text-align: right;
+            font-weight: bold;
             border-radius: 5px;
             font-size: 150px;
             height: 150px;
@@ -41,8 +44,9 @@
         }
         .number-showing{
             background-color: transparent;
-            color: rgb(191, 191, 191);
+            color: rgb(205, 205, 205);
             text-align: right;
+            font-weight: bold;
             border-radius: 5px;
             font-size: 64px;
             height: 64px;
@@ -69,9 +73,9 @@
             margin: 10px;
         }
         .btn-sq{
-            border-radius: 25px;
+            border-radius: 20px;
             
-            height: 125px;
+            height: 150px;
         }
         .gray-btn {
             background-color: #353535;
@@ -90,8 +94,8 @@
             opacity: 0.8;
         }
         .icon{
-            width: 90px;
-            height: 90px;
+            width: 95px;
+            height: 95px;
         }
         .numfont{
             font-size: 80px;
@@ -100,7 +104,7 @@
             font-size: 150px;
         }
         .textfont{
-            font-size: 45px;
+            font-size: 64px;
         }
     </style>
 </head>
@@ -119,7 +123,9 @@
             <button class="btn btn-sq textfont gray-btn" >Int</button>
 
   
-            <button class="gray-btn numfont btn" class="delete-all" id="delete-all" >AC</button>
+            <button class="gray-btn numfont btn" class="delete-all" id="delete-all" >
+                <img class="icon" src="backspace.png">
+            </button>
             <button class="btn numfont gray-btn" >$</button>
             <button class="btn numfont gray-btn" >%</button>
             <button class="btn signsfont colored-btn" >÷</button>
@@ -152,5 +158,5 @@
 
 
 </body>
-<script src="testing1.js"></script>
+<script src="calc.js"></script>
 </html>
