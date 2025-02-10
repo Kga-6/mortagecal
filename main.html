@@ -7,41 +7,51 @@
         body {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-end; /* Align items to the bottom */
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: black;
+            padding-bottom: 20px; /* Add some padding at the bottom */
         }
+
         .calculator {
             width: 90vw;
-          
             background-color: transparent;
             border-radius: 10px;
             padding: 15px;
+            margin-bottom: 20px; /* Optional: Add some margin at the bottom */
+        }
+        .display-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-bottom: 64px;
         }
         .display {
             background-color: transparent;
             color: white;
             text-align: right;
             border-radius: 5px;
-            font-size: 64px;
-            height: 100px;
+            font-size: 150px;
+            height: 150px;
+            margin-bottom: 30px;
             margin-right: 10px;
+   
         }
         .number-showing{
             background-color: transparent;
             color: rgb(191, 191, 191);
             text-align: right;
-            margin-bottom: 20px;
             border-radius: 5px;
-            font-size: 30px;
+            font-size: 64px;
             height: 64px;
+            margin-right: 10px;
         }
         .keyboard {
             display: grid;
             justify-items: center;
-            grid-template-columns: repeat(5, 0.75fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 5px;
         }
         .btn {
@@ -50,13 +60,18 @@
             align-items: center;
             justify-content: center;
             font-size: 64px;
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border: none;
             border-radius: 51000px;
             cursor: pointer;
             transition: background-color 0.3s;
             margin: 10px;
+        }
+        .btn-sq{
+            border-radius: 25px;
+            
+            height: 125px;
         }
         .gray-btn {
             background-color: #353535;
@@ -75,60 +90,63 @@
             opacity: 0.8;
         }
         .icon{
-            width: 28px;
-            height: 28px;
+            width: 90px;
+            height: 90px;
         }
         .numfont{
-            font-size: 64px;
+            font-size: 80px;
+        }
+        .signsfont{
+            font-size: 150px;
         }
         .textfont{
-            font-size: 30px;
+            font-size: 45px;
         }
     </style>
 </head>
 <body>
     <div class="calculator">
-        <div class="display" id="display">0</div>
-        <div style="display: none;" class="number-showing" id="number-showing">LOAN AMOUNT</div>
+        <div class="display-container">
+            <div class="display" id="display">0</div>
+            <div style="display: none;" class="number-showing" id="number-showing">LOAN AMOUNT</div>
+        </div>
+        
         <div class="keyboard">
 
-            <div>
-                <button class="btn numfont gray-btn" >
-                    <label class="delete-all" id="delete-all">AC</label>
-                    <img style="display: none;" class="icon" id="delete-backspace" src="backspace.png" ></button>
-                </button>
+            <button class="btn btn-sq textfont gray-btn" >Loan</button>
+            <button class="btn btn-sq textfont gray-btn" >Pmt</button>
+            <button class="btn btn-sq textfont gray-btn" >Term</button>
+            <button class="btn btn-sq textfont gray-btn" >Int</button>
 
-            </div>
-            <button class="gray-btn numfont btn" >$</button>
+  
+            <button class="gray-btn numfont btn" class="delete-all" id="delete-all" >AC</button>
+            <button class="btn numfont gray-btn" >$</button>
             <button class="btn numfont gray-btn" >%</button>
-            <button class="btn numfont gray-btn" ></button>
-            <button class="btn numfont colored-btn" >÷</button>
+            <button class="btn signsfont colored-btn" >÷</button>
 
-            <button class="btn textfont gray-btn" >Loan Amt</button>
+    
             <button class="btn numfont black-btn" >7</button>
             <button class="btn numfont black-btn" >8</button>
             <button class="btn numfont black-btn" >9</button>
-            <button class="btn numfont colored-btn" >×</button>
+            <button class="btn signsfont colored-btn" >×</button>
 
-            <button class="btn textfont gray-btn" >Pmt</button>
+
             <button class="btn numfont black-btn" >4</button>
             <button class="btn numfont black-btn" >5</button>
             <button class="btn numfont black-btn" >6</button>
-            <button class="btn numfont colored-btn" >-</button>
+            <button class="btn signsfont colored-btn" >-</button>
 
-            <button class="btn textfont gray-btn" >Term</button>
             <button class="btn numfont black-btn" >1</button>
             <button class="btn numfont black-btn" >2</button>
             <button class="btn numfont black-btn" >3</button>
-            <button class="btn numfont colored-btn" >+</button>
+            <button class="btn signsfont colored-btn" >+</button>
 
-            <button class="btn textfont gray-btn" >Int</button>
             <div class="btn black-btn" id="print">
                 <img class="icon" src="callogo.png" ></button>
             </div>
             <button class="btn numfont black-btn" >0</button>
-            <button class="btn numfont black-btn" >.</button>
-            <button class="btn numfont colored-btn" >=</button>
+            <button class="btn signsfont black-btn" >.</button>
+            <button class="btn signsfont colored-btn" >=</button>
         </div>
     </div>
 
