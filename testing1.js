@@ -91,7 +91,7 @@ function handleOperation(operation) {
     const numValue = parseFloat(currentInput) || 0;
 
     switch (operation) {
-        case "Price":
+        case "$":
             numberShowing.textContent = "HOME PRICE";
             numberShowing.style.display = "block";
             if (!showingNumber) {
