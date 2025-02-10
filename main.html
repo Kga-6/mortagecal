@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mortgage Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+        .calculator {
+            background-color: transparent;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        .display {
+            background-color: transparent;
+            color: white;
+            text-align: right;
+            border-radius: 5px;
+            font-size: 24px;
+            height: 40px;
+        }
+        .number-showing{
+            background-color: transparent;
+            color: rgb(191, 191, 191);
+            text-align: right;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            height: 30px;
+        }
+        .keyboard {
+            display: grid;
+            grid-template-columns: repeat(5, 0.75fr);
+            gap: 5px;
+        }
+        .btn {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100%;
+            width: 70px;
+            height: 70px;
+            border: none;
+            border-radius: 51000px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .gray-btn {
+            background-color: #353535;
+            color: white;
+        }
+        .black-btn {
+            background-color: #222;
+            color: white;
+        }
+
+        .colored-btn{
+            background-color: #d41444;
+            color: white;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+        .icon{
+            width: 28px;
+            height: 28px;
+        }
+        .numfont{
+            font-size: 24px;
+        }
+        .textfont{
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div style="display: none;" class="number-showing" id="number-showing">LOAN AMOUNT</div>
+        <div class="keyboard">
+
+            <div class="btn black-btn">
+                <button class="btn textfont gray-btn" >
+                    <label class="delete-all" id="delete-all">AC</label>
+                    <img style="display: none;" class="icon" id="delete-backspace" src="backspace.png" ></button>
+                </button>
+
+            </div>
+            <button class="gray-btn textfont btn" >Price</button>
+            <button class="btn numfont gray-btn" >%</button>
+            <button class="btn numfont gray-btn" ></button>
+            <button class="btn numfont colored-btn" >÷</button>
+
+            <button class="btn textfont gray-btn" >Loan Amt</button>
+            <button class="btn numfont black-btn" >7</button>
+            <button class="btn numfont black-btn" >8</button>
+            <button class="btn numfont black-btn" >9</button>
+            <button class="btn numfont colored-btn" >×</button>
+
+            <button class="btn textfont gray-btn" >Pmt</button>
+            <button class="btn numfont black-btn" >4</button>
+            <button class="btn numfont black-btn" >5</button>
+            <button class="btn numfont black-btn" >6</button>
+            <button class="btn numfont colored-btn" >-</button>
+
+            <button class="btn textfont gray-btn" >Term</button>
+            <button class="btn numfont black-btn" >1</button>
+            <button class="btn numfont black-btn" >2</button>
+            <button class="btn numfont black-btn" >3</button>
+            <button class="btn numfont colored-btn" >+</button>
+
+            <button class="btn textfont gray-btn" >Int</button>
+            <div class="btn black-btn" id="print">
+                <img class="icon" src="callogo.png" ></button>
+            </div>
+            <button class="btn numfont black-btn" >0</button>
+            <button class="btn numfont black-btn" >.</button>
+            <button class="btn numfont colored-btn" >=</button>
+        </div>
+    </div>
+
+
+</body>
+<script src="testing1.js"></script>
+</html>
